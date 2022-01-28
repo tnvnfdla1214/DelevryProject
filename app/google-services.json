@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942658941639",
+    "project_id": "deleveryproject-e3ea0",
+    "storage_bucket": "deleveryproject-e3ea0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942658941639:android:bc81577289c1358a03c4e2",
+        "android_client_info": {
+          "package_name": "com.example.delevryproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942658941639-2ueh7nrpd76bd7kn18iv67c1bdu1a5je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl_vzZVesAICGeo97Otyn0p87rZGCY_vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942658941639-2ueh7nrpd76bd7kn18iv67c1bdu1a5je.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
