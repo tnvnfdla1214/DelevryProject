@@ -3,28 +3,32 @@ package com.example.delevryproject.ui.home
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.delevryproject.R
-import com.example.delevryproject.data.model.BannerItem
-import com.example.delevryproject.ui.EventActivity
-import com.example.delevryproject.ui.collapse
-import com.example.delevryproject.ui.expand
+import com.example.delevryproject.data.local.model.BannerItem
+import com.example.delevryproject.databinding.FragmentHomeBinding
+import com.example.delevryproject.ui.event.EventActivity
+import com.example.delevryproject.ui.base.BaseFragment
+import com.example.delevryproject.extension.collapse
+import com.example.delevryproject.extension.expand
+
 import dagger.hilt.android.AndroidEntryPoint
 
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 @AndroidEntryPoint
-class HomeFragment : Fragment(R.layout.fragment_home), Interaction {
+class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(), Interaction {
+
+    override val viewModel by viewModels<HomeViewModel>()
+    override fun getViewBinding(): FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
 
     private lateinit var gridRecyclerViewAdapter: GridRecyclerViewAdapter
     private lateinit var viewPagerAdapter: ViewPagerAdapter
-    private val homeViewModel: HomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,13 +42,13 @@ class HomeFragment : Fragment(R.layout.fragment_home), Interaction {
     }
 
     private fun subscribeObservers() {
-        homeViewModel.bannerItemList.observe(viewLifecycleOwner, Observer {
+        viewModel.bannerItemList.observe(viewLifecycleOwner, Observer {
             viewPagerAdapter.submitList(it)
         })
-        homeViewModel.gridItemList.observe(viewLifecycleOwner, Observer {
+        viewModel.gridItemList.observe(viewLifecycleOwner, Observer {
             gridRecyclerViewAdapter.submitList(it)
         })
-        homeViewModel.currentPosition.observe(viewLifecycleOwner, Observer {
+        viewModel.currentPosition.observe(viewLifecycleOwner, Observer {
             viewPager2.currentItem = it
         })
     }
@@ -53,8 +57,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), Interaction {
         viewLifecycleOwner.lifecycleScope.launchWhenResumed {
             while (viewLifecycleOwner.lifecycleScope.isActive) {
                 delay(3000)
-                homeViewModel.getCurrentPosition()?.let {
-                    homeViewModel.setCurrentPosition(it.plus(1) % 5)
+                viewModel.getCurrentPosition()?.let {
+                    viewModel.setCurrentPosition(it.plus(1) % 5)
                 }
             }
         }
@@ -77,7 +81,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), Interaction {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     tv_page_number.text = "${position + 1}"
-                    homeViewModel.setCurrentPosition(position)
+                    viewModel.setCurrentPosition(position)
                 }
             })
         }
@@ -107,7 +111,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), Interaction {
 
     override fun onResume() {
         super.onResume()
-        homeViewModel.getBannerItems()
-        homeViewModel.getGridItems()
+        viewModel.getBannerItems()
+        viewModel.getGridItems()
     }
+
+
+    override fun observeData() {
+    }
+
 }

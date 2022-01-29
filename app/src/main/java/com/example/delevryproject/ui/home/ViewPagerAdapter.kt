@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delevryproject.R
-import com.example.delevryproject.data.model.BannerItem
+import com.example.delevryproject.data.local.model.BannerItem
 
 import kotlinx.android.synthetic.main.item_layout_banner.view.*
 

@@ -2,11 +2,11 @@ package com.example.delevryproject.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.delevryproject.data.model.BannerItem
-import com.example.delevryproject.data.model.GridItem
-import com.example.delevryproject.data.repository.a_home.HomeRepository
+import com.example.delevryproject.data.local.model.BannerItem
+import com.example.delevryproject.data.local.model.GridItem
+import com.example.delevryproject.data.repository.home.HomeRepository
+import com.example.delevryproject.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 
 import kotlinx.coroutines.Dispatchers.Main
@@ -18,7 +18,7 @@ import javax.inject.Inject
 class HomeViewModel
 @Inject constructor(
     private val homeRepository: HomeRepository
-) : ViewModel() {
+) : BaseViewModel() {
 
     private val _bannerItemList: MutableLiveData<List<BannerItem>> = MutableLiveData()
     private val _gridItemList: MutableLiveData<List<GridItem>> = MutableLiveData()

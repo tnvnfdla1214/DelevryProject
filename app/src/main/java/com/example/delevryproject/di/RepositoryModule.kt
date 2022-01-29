@@ -1,13 +1,16 @@
 package com.example.delevryproject.di
 
+import android.content.Context
+import com.example.delevryproject.data.local.preference.AppPreferenceManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import javax.inject.Singleton
-import com.example.delevryproject.data.repository.a_home.HomeRepository
-import com.example.delevryproject.data.repository.a_home.HomeRepositoryImpl
-import com.example.delevryproject.data.repository.b_eathome.EatWhatRepository
-import com.example.delevryproject.data.repository.b_eathome.EatWhatRepositoryImpl
+import com.example.delevryproject.data.repository.home.HomeRepository
+import com.example.delevryproject.data.repository.home.HomeRepositoryImpl
+import com.example.delevryproject.data.repository.eathome.EatWhatRepository
+import com.example.delevryproject.data.repository.eathome.EatWhatRepositoryImpl
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 
 
@@ -36,5 +39,10 @@ object RepositoryModule {
     fun provideEatWhatRepository(): EatWhatRepository {
         return EatWhatRepositoryImpl()
     }
+    //ApplicationContext 넣는법
+    @Singleton
+    @Provides
+    fun provideAppPreferenceManager(@ApplicationContext context: Context) : AppPreferenceManager
+        = AppPreferenceManager(context)
 
 }

@@ -2,10 +2,10 @@ package com.example.delevryproject.ui.eatwhat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.delevryproject.data.model.WhatToEat
-import com.example.delevryproject.data.repository.b_eathome.EatWhatRepository
+import com.example.delevryproject.data.local.model.WhatToEat
+import com.example.delevryproject.data.repository.eathome.EatWhatRepository
+import com.example.delevryproject.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
@@ -15,7 +15,7 @@ import javax.inject.Inject
 class EatWhatViewModel
 @Inject constructor(
     private val eatWhatRepository: EatWhatRepository
-): ViewModel() {
+): BaseViewModel() {
     private val _eatWhatToEatList: MutableLiveData<List<WhatToEat>> = MutableLiveData()
     val eatWhatToEatList: LiveData<List<WhatToEat>>
         get() = _eatWhatToEatList

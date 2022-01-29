@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delevryproject.R
-import com.example.delevryproject.data.model.GridItem
+import com.example.delevryproject.data.local.model.GridItem
 
 import kotlinx.android.synthetic.main.item_layout_grid.view.*
 import kotlinx.coroutines.CoroutineScope

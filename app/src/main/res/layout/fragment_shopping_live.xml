@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
-        android:id="@+id/ggim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
@@ -12,6 +11,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/tong"/>
+        android:src="@drawable/image_no"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
