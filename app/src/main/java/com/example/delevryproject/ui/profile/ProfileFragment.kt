@@ -27,6 +27,7 @@ class ProfileFragment: BaseFragment<ProfileViewModel, FragmentProfileBinding>() 
     override fun getViewBinding(): FragmentProfileBinding = FragmentProfileBinding.inflate(layoutInflater)
 
     override fun initViews() = with(binding) {
+        Log.d("민규","1")
         loginButton.setOnClickListener {
             signInGoogle()
         }
@@ -42,10 +43,11 @@ class ProfileFragment: BaseFragment<ProfileViewModel, FragmentProfileBinding>() 
         }
     }
     private fun handleLoadingState() = with(binding) {
+        Log.d("민규","2")
         progressBar.isVisible = true
     }
     private fun handleLoginState(state: ProfileState.Login) = with(binding) {
-        binding.progressBar.isVisible = true
+        Log.d("민규","3")
         loginButton.isGone = true
         val credential = GoogleAuthProvider.getCredential(state.idToken, null)
         firebaseAuth.signInWithCredential(credential)
@@ -57,12 +59,15 @@ class ProfileFragment: BaseFragment<ProfileViewModel, FragmentProfileBinding>() 
             }
     }
     private fun handleSuccessState(state: ProfileState.Success) = with(binding) {
+        Log.d("민규","4")
         progressBar.isGone = true
         when (state) {
             is ProfileState.Success.Registered -> {
+                Log.d("민규","5")
                 scrollview.isVisible = true
             }
             is ProfileState.Success.NotRegistered -> {
+                Log.d("민규","6")
                 //등록되어 있지 않을때-> 지금은 무조건 등록되어 있다고 함
             }
         }

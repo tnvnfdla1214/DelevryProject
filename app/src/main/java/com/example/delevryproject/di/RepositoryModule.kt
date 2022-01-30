@@ -10,8 +10,12 @@ import com.example.delevryproject.data.repository.home.HomeRepository
 import com.example.delevryproject.data.repository.home.HomeRepositoryImpl
 import com.example.delevryproject.data.repository.eathome.EatWhatRepository
 import com.example.delevryproject.data.repository.eathome.EatWhatRepositoryImpl
+import com.example.delevryproject.data.repository.order.OrderRepository
+import com.example.delevryproject.data.repository.order.OrderRepositoryImpl
+import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
 
 
 // Repository는 뷰, 뷰 모델과 별개로 존재해야 하며, 어디서든 접근이 가능해야 하므로 Singleton 컴포넌트로 작성
@@ -39,10 +43,13 @@ object RepositoryModule {
     fun provideEatWhatRepository(): EatWhatRepository {
         return EatWhatRepositoryImpl()
     }
-    //ApplicationContext 넣는법
+
     @Singleton
     @Provides
-    fun provideAppPreferenceManager(@ApplicationContext context: Context) : AppPreferenceManager
-        = AppPreferenceManager(context)
+    fun provideOrderRepository(@DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher, firestore: FirebaseFirestore): OrderRepository {
+        return OrderRepositoryImpl(ioDispatcher,firestore)
+    }
+
+
 
 }
