@@ -4,7 +4,7 @@ import android.os.Parcelable
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.example.delevryproject.data.entitiy.Entity
-import com.example.delevryproject.ui.restaurant.RestaurantCategory
+import com.example.delevryproject.ui.home.restaurant.RestaurantCategory
 import com.example.delevryproject.util.convertor.RoomTypeConverters
 import kotlinx.android.parcel.Parcelize
 

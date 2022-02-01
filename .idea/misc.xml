@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/arrow_down.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/arrow_up.xml" value="0.26564102564102565" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/bg_frame_gallery.xml" value="0.1703125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_arrow_drop_down_circle_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_arrow_right.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_baseline_dehaze_24.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_clock.xml" value="0.1703125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_dehaze_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_favorite_border_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.26564102564102565" />
@@ -16,6 +18,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_remove_from_queue_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_reorder_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.26564102564102565" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_star.xml" value="0.1703125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/ic_tag_faces_black_24dp.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/item_layout_grid.xml" value="0.26296296296296295" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/rectangle_all_corner_radius.xml" value="0.26564102564102565" />
@@ -23,11 +26,12 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/drawable/white_rectangle_left_radius.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_event.xml" value="0.1296875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_my_location.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_b_mart.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_deliver_take_out.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_eat_what.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_favorite.xml" value="0.176" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_order.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_order_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
@@ -37,7 +41,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/item_layout_tags.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/item_layout_what_to_eat.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/layout_slide_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_like_restaurant.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_order.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_restaurant.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/menu/bottom_main_nav.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2361111111111111" />
       </map>

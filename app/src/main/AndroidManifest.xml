@@ -25,7 +25,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.event.EventActivity"/>
+        <activity android:name="com.example.delevryproject.ui.home.event.EventActivity" android:exported="true"/>
+        <activity android:name=".ui.home.mylocation.MyLocationActivity" android:screenOrientation="portrait" android:exported="true"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map" />
     </application>
 
 </manifest>

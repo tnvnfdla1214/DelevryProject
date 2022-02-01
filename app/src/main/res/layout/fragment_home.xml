@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/adressgroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -20,8 +21,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ProgressBar
+                android:id="@+id/locationLoading"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+
             <TextView
-                android:id="@+id/tv_address"
+                android:id="@+id/locationTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

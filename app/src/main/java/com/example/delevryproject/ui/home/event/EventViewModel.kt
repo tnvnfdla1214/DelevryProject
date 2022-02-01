@@ -1,4 +1,4 @@
-package com.example.delevryproject.ui.event
+package com.example.delevryproject.ui.home.event
 
 import com.example.delevryproject.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

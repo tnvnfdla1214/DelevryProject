@@ -2,13 +2,17 @@ package com.example.delevryproject.util.mapper
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.example.delevryproject.databinding.ViewholderLikeRestaurantBinding
 import com.example.delevryproject.databinding.ViewholderOrderBinding
+import com.example.delevryproject.databinding.ViewholderRestaurantBinding
 import com.example.delevryproject.model.CellType
 import com.example.delevryproject.model.Model
 import com.example.delevryproject.ui.base.BaseViewModel
 import com.example.delevryproject.util.provider.ResourcesProvider
 import com.example.delevryproject.widget.adapter.viewholder.ModelViewHolder
 import com.example.delevryproject.widget.adapter.viewholder.order.OrderViewHolder
+import com.example.delevryproject.widget.adapter.viewholder.restaurant.LikeRestaurantViewHolder
+import com.example.delevryproject.widget.adapter.viewholder.restaurant.RestaurantViewHolder
 
 
 //반환값이 ModelViewHolder<M>이다.
@@ -28,18 +32,18 @@ object ModelViewHolderMapper {
         // CellType에 따른 viewHolder 분기 기준은 CellType에 적어놓았다.
         val inflater = LayoutInflater.from(parent.context)
         val viewHolder = when (type) {
-//            CellType.RESTAURANT_CELL ->
-//                RestaurantViewHolder(
-//                    ViewholderRestaurantBinding.inflate(inflater, parent, false),
-//                    viewModel,
-//                    resourcesProvider
-//                )
-//            CellType.LIKE_RESTAURANT_CELL ->
-//                LikeRestaurantViewHolder(
-//                    ViewholderLikeRestaurantBinding.inflate(inflater, parent, false),
-//                    viewModel,
-//                    resourcesProvider
-//                )
+            CellType.RESTAURANT_CELL ->
+                RestaurantViewHolder(
+                    ViewholderRestaurantBinding.inflate(inflater, parent, false),
+                    viewModel,
+                    resourcesProvider
+                )
+            CellType.LIKE_RESTAURANT_CELL ->
+                LikeRestaurantViewHolder(
+                    ViewholderLikeRestaurantBinding.inflate(inflater, parent, false),
+                    viewModel,
+                    resourcesProvider
+                )
 //            CellType.FOOD_CELL ->
 //                FoodMenuViewHolder(
 //                    ViewholderFoodMenuBinding.inflate(inflater, parent, false),

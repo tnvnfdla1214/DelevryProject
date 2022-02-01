@@ -2,8 +2,8 @@ package com.example.delevryproject.data.repository.user
 
 import com.example.delevryproject.data.entitiy.locaion.LocationLatLngEntity
 import com.example.delevryproject.data.entitiy.restaurant.RestaurantEntity
-import com.example.delevryproject.data.remote.db.dao.LocationDao
-import com.example.delevryproject.data.remote.db.dao.RestaurantDao
+import com.example.delevryproject.data.local.db.dao.LocationDao
+import com.example.delevryproject.data.local.db.dao.RestaurantDao
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 

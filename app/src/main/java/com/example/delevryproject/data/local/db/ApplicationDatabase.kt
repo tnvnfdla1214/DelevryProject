@@ -1,12 +1,12 @@
-package com.example.delevryproject.data.remote.db
+package com.example.delevryproject.data.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.delevryproject.data.entitiy.locaion.LocationLatLngEntity
 import com.example.delevryproject.data.entitiy.restaurant.RestaurantEntity
 import com.example.delevryproject.data.entitiy.restaurant.RestaurantFoodEntity
-import com.example.delevryproject.data.remote.db.dao.LocationDao
-import com.example.delevryproject.data.remote.db.dao.RestaurantDao
+import com.example.delevryproject.data.local.db.dao.LocationDao
+import com.example.delevryproject.data.local.db.dao.RestaurantDao
 
 
 @Database(

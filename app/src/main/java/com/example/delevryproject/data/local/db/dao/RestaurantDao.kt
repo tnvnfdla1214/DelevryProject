@@ -1,4 +1,4 @@
-package com.example.delevryproject.data.remote.db.dao
+package com.example.delevryproject.data.local.db.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

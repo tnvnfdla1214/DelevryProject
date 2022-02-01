@@ -10,8 +10,8 @@ package com.example.delevryproject.model
 * */
 enum class CellType {
 
-//    RESTAURANT_CELL,
-//    LIKE_RESTAURANT_CELL,
+    RESTAURANT_CELL,
+    LIKE_RESTAURANT_CELL,
 //    FOOD_CELL,
 //    ORDER_FOOD_CELL,
 //    REVIEW_CELL,

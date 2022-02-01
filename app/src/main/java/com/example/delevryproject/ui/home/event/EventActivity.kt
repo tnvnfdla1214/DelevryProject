@@ -1,13 +1,10 @@
-package com.example.delevryproject.ui.event
+package com.example.delevryproject.ui.home.event
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import com.example.delevryproject.R
 import com.example.delevryproject.databinding.ActivityEventBinding
-import com.example.delevryproject.databinding.ActivityMainBinding
 import com.example.delevryproject.ui.base.BaseActivity
-import com.example.delevryproject.ui.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 import kotlinx.android.synthetic.main.activity_event.*

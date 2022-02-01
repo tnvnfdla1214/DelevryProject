@@ -1,4 +1,4 @@
-package com.example.delevryproject.ui.restaurant
+package com.example.delevryproject.ui.home.restaurant
 
 import androidx.annotation.StringRes
 import com.example.delevryproject.R

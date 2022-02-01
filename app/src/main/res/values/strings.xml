@@ -55,7 +55,7 @@
 
     <!-- like list -->
     <string name="liked">찜</string>
-    <string name="like_list">찜 리스트</string>
+    <string name="like_list">찜한 가게</string>
 
     <string name="order_history_title">주문 내역 : %s</string>
     <string name="add_restaurant_review">%s 리뷰 등록</string>
@@ -70,4 +70,7 @@
 
     <!-- Image Preview -->
     <string name="images_page">(%d/%d)</string>
+
+    <string name="eat_what">뭐 먹지</string>
+    <string name="profile">내 정보</string>
 </resources>

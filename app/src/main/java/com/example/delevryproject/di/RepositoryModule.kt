@@ -1,7 +1,8 @@
 package com.example.delevryproject.di
 
-import android.content.Context
-import com.example.delevryproject.data.local.preference.AppPreferenceManager
+import com.example.delevryproject.data.local.db.dao.LocationDao
+import com.example.delevryproject.data.local.db.dao.RestaurantDao
+import com.example.delevryproject.data.remote.network.MapApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,10 +11,13 @@ import com.example.delevryproject.data.repository.home.HomeRepository
 import com.example.delevryproject.data.repository.home.HomeRepositoryImpl
 import com.example.delevryproject.data.repository.eathome.EatWhatRepository
 import com.example.delevryproject.data.repository.eathome.EatWhatRepositoryImpl
+import com.example.delevryproject.data.repository.map.MapRepository
+import com.example.delevryproject.data.repository.map.MapRepositoryImpl
 import com.example.delevryproject.data.repository.order.OrderRepository
 import com.example.delevryproject.data.repository.order.OrderRepositoryImpl
+import com.example.delevryproject.data.repository.user.UserRepository
+import com.example.delevryproject.data.repository.user.UserRepositoryImpl
 import com.google.firebase.firestore.FirebaseFirestore
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
 
@@ -46,9 +50,23 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideOrderRepository(@DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher, firestore: FirebaseFirestore): OrderRepository {
-        return OrderRepositoryImpl(ioDispatcher,firestore)
-    }
+    fun provideOrderRepository(@DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher,
+                               firestore: FirebaseFirestore
+    ): OrderRepository = OrderRepositoryImpl(ioDispatcher,firestore)
+
+    @Singleton
+    @Provides
+    fun provideUserRepository(locationDao: LocationDao,
+                              restaurantDao: RestaurantDao,
+                              @DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher): UserRepository
+    = UserRepositoryImpl(locationDao,restaurantDao,ioDispatcher)
+
+    @Singleton
+    @Provides
+    fun provideMapRepository(mapApiService: MapApiService,
+                             @DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher): MapRepository
+            = MapRepositoryImpl(mapApiService,ioDispatcher)
+
 
 
 
