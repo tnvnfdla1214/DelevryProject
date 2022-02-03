@@ -22,6 +22,7 @@ import com.example.delevryproject.extension.load
 import com.example.delevryproject.ui.base.BaseActivity
 import com.example.delevryproject.ui.home.HomeViewModel
 import com.example.delevryproject.ui.home.mylocation.MyLocationViewModel
+import com.example.delevryproject.ui.home.order.OrderMenuListActivity
 import com.example.delevryproject.ui.home.restaurant.detail.menu.RestaurantMenuListFragment
 import com.example.delevryproject.ui.home.restaurant.detail.review.RestaurantReviewListFragment
 import com.example.delevryproject.ui.home.restaurant.fragment.RestaurantListFragment
@@ -208,9 +209,9 @@ class RestaurantDetailActivity : BaseActivity<RestaurantDetailViewModel, Activit
                     Toast.makeText(this@RestaurantDetailActivity, "장바구니에 주문할 메뉴를 추가해주세요.", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
-//                startActivity(
-//                    OrderMenuListActivity.newIntent(this@RestaurantDetailActivity)
-//                )
+                startActivity(
+                    OrderMenuListActivity.newIntent(this@RestaurantDetailActivity)
+                )
             }
         }
     }
