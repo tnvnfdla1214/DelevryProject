@@ -28,6 +28,7 @@
         <activity android:name="com.example.delevryproject.ui.home.event.EventActivity" android:exported="true"/>
         <activity android:name=".ui.home.mylocation.MyLocationActivity" android:screenOrientation="portrait" android:exported="true"/>
         <activity android:name="com.example.delevryproject.ui.home.restaurant.RestaurantListActivity" android:exported="true"/>
+        <activity android:name=".ui.home.restaurant.detail.RestaurantDetailActivity" android:screenOrientation="portrait" android:exported="true"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

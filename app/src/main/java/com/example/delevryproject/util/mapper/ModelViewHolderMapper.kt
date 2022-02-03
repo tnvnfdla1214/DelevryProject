@@ -2,6 +2,7 @@ package com.example.delevryproject.util.mapper
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.example.delevryproject.databinding.ViewholderFoodMenuBinding
 import com.example.delevryproject.databinding.ViewholderLikeRestaurantBinding
 import com.example.delevryproject.databinding.ViewholderOrderBinding
 import com.example.delevryproject.databinding.ViewholderRestaurantBinding
@@ -10,6 +11,7 @@ import com.example.delevryproject.model.Model
 import com.example.delevryproject.ui.base.BaseViewModel
 import com.example.delevryproject.util.provider.ResourcesProvider
 import com.example.delevryproject.widget.adapter.viewholder.ModelViewHolder
+import com.example.delevryproject.widget.adapter.viewholder.food.FoodMenuViewHolder
 import com.example.delevryproject.widget.adapter.viewholder.order.OrderViewHolder
 import com.example.delevryproject.widget.adapter.viewholder.restaurant.LikeRestaurantViewHolder
 import com.example.delevryproject.widget.adapter.viewholder.restaurant.RestaurantViewHolder
@@ -44,12 +46,12 @@ object ModelViewHolderMapper {
                     viewModel,
                     resourcesProvider
                 )
-//            CellType.FOOD_CELL ->
-//                FoodMenuViewHolder(
-//                    ViewholderFoodMenuBinding.inflate(inflater, parent, false),
-//                    viewModel,
-//                    resourcesProvider
-//                )
+            CellType.FOOD_CELL ->
+                FoodMenuViewHolder(
+                    ViewholderFoodMenuBinding.inflate(inflater, parent, false),
+                    viewModel,
+                    resourcesProvider
+                )
 //            CellType.ORDER_FOOD_CELL ->
 //                OrderMenuViewHolder(
 //                    ViewholderOrderMenuBinding.inflate(inflater, parent, false),

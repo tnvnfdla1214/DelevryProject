@@ -2,6 +2,7 @@ package com.example.delevryproject.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.annotation.IdRes
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import com.example.delevryproject.R
@@ -50,4 +51,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
         )
         currentNavController = controller
     }
+}
+enum class MainTabMenu(@IdRes val menuId: Int) {
+    HOME(R.id.nav_home), MY(R.id.nav_profile)
 }

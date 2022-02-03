@@ -11,6 +11,7 @@ import com.example.delevryproject.ui.base.BaseFragment
 import com.example.delevryproject.ui.home.HomeViewModel
 import com.example.delevryproject.ui.home.mylocation.MyLocationViewModel
 import com.example.delevryproject.ui.home.restaurant.RestaurantCategory
+import com.example.delevryproject.ui.home.restaurant.detail.RestaurantDetailActivity
 import com.example.delevryproject.widget.adapter.ModelRecyclerAdapter
 import com.example.delevryproject.widget.adapter.listener.restaurant.RestaurantListListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,9 +46,9 @@ class RestaurantListFragment : BaseFragment<RestaurantListFagmentViewModel, Frag
             *  매장 리스트중에서 한 아이템이 클릭되었을 경우 "가게 상세"로 이동한다.
             */
             override fun onClickItem(model: RestaurantModel) {
-//                startActivity(
-//                    RestaurantDetailActivity.newIntent(requireContext(), model.toEntity())
-//                )
+                startActivity(
+                    RestaurantDetailActivity.newIntent(requireContext(), model.toEntity())
+                )
             }
         })
     }

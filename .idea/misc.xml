@@ -28,6 +28,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_my_location.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_restaurant.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_restaurant_detail.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/activity_restaurantlist.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_b_mart.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/fragment_deliver_take_out.xml" value="0.264" />
@@ -43,6 +44,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/item_layout_tags.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/item_layout_what_to_eat.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/layout_slide_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_food_menu.xml" value="0.1296875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_like_restaurant.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_order.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DelevryProject/app/src/main/res/layout/viewholder_restaurant.xml" value="0.25364583333333335" />
