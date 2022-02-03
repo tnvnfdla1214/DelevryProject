@@ -1,7 +1,9 @@
 package com.example.delevryproject.di
 
+import com.example.delevryproject.data.local.db.dao.FoodMenuBasketDao
 import com.example.delevryproject.data.local.db.dao.LocationDao
 import com.example.delevryproject.data.local.db.dao.RestaurantDao
+import com.example.delevryproject.data.remote.network.FoodApiService
 import com.example.delevryproject.data.remote.network.MapApiService
 import dagger.Module
 import dagger.Provides
@@ -15,8 +17,13 @@ import com.example.delevryproject.data.repository.map.MapRepository
 import com.example.delevryproject.data.repository.map.MapRepositoryImpl
 import com.example.delevryproject.data.repository.order.OrderRepository
 import com.example.delevryproject.data.repository.order.OrderRepositoryImpl
+import com.example.delevryproject.data.repository.restaurant.RestaurantRepository
+import com.example.delevryproject.data.repository.restaurant.RestaurantRepositoryImpl
+import com.example.delevryproject.data.repository.restaurant.food.RestaurantFoodRepository
+import com.example.delevryproject.data.repository.restaurant.food.RestaurantFoodRepositoryImpl
 import com.example.delevryproject.data.repository.user.UserRepository
 import com.example.delevryproject.data.repository.user.UserRepositoryImpl
+import com.example.delevryproject.util.provider.ResourcesProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
@@ -67,7 +74,22 @@ object RepositoryModule {
                              @DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher): MapRepository
             = MapRepositoryImpl(mapApiService,ioDispatcher)
 
+    @Singleton
+    @Provides
+    fun provideRestaurantFoodRepository (
+        foodApiService: FoodApiService,
+        foodMenuBasketDao: FoodMenuBasketDao,
+        @DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher
+    ): RestaurantFoodRepository
+            = RestaurantFoodRepositoryImpl(foodApiService,foodMenuBasketDao,ioDispatcher)
 
-
+    @Singleton
+    @Provides
+    fun provideRestaurantRepository(
+        mapApiService: MapApiService,
+        resourcesProvider: ResourcesProvider,
+        @DispatcherModule.IoDispatcher ioDispatcher: CoroutineDispatcher
+    ): RestaurantRepository
+            = RestaurantRepositoryImpl(mapApiService,resourcesProvider,ioDispatcher)
 
 }

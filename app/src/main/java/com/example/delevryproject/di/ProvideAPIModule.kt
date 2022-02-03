@@ -1,12 +1,17 @@
 package com.example.delevryproject.di
 
+import android.content.Context
 import com.example.delevryproject.BuildConfig
 import com.example.delevryproject.data.remote.network.FoodApiService
 import com.example.delevryproject.data.remote.network.MapApiService
 import com.example.delevryproject.data.remote.url.Url
+import com.example.delevryproject.ui.home.restaurant.RestautantFilterOrder
+import com.example.delevryproject.util.provider.ResourcesProvider
+import com.example.delevryproject.util.provider.ResourcesProviderImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,6 +24,19 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class ProvideAPIModule {
+
+    @Singleton
+    @Provides
+    fun provideRestautantFilterOrder(): RestautantFilterOrder {
+        return RestautantFilterOrder.DEFAULT
+    }
+
+    @Singleton
+    @Provides
+    fun provideResourcesProvider(@ApplicationContext context: Context): ResourcesProvider {
+        return ResourcesProviderImpl(context)
+    }
+
     /* 기본 설정 및 data :
     *  통신에 관련된 기능들
     */

@@ -3,6 +3,7 @@ package com.example.delevryproject.di
 import android.content.Context
 import androidx.room.Room
 import com.example.delevryproject.data.local.db.ApplicationDatabase
+import com.example.delevryproject.data.local.db.dao.FoodMenuBasketDao
 import com.example.delevryproject.data.local.db.dao.LocationDao
 import com.example.delevryproject.data.local.db.dao.RestaurantDao
 import com.example.delevryproject.data.local.preference.AppPreferenceManager
@@ -30,6 +31,10 @@ object LocalDBModule {
     @Provides
     @Singleton
     fun providesRestaurantDao(applicationDatabase: ApplicationDatabase): RestaurantDao = applicationDatabase.RestaurantDao()
+
+    @Provides
+    @Singleton
+    fun providesFoodMenuBasketDao(applicationDatabase: ApplicationDatabase): FoodMenuBasketDao = applicationDatabase.FoodMenuBasketDao()
 
     @Provides
     @Singleton

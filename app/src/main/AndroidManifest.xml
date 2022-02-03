@@ -14,8 +14,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".BaseApplication">
+        android:name=".BaseApplication"
+        android:theme="@style/Theme.Delivery">
         <activity android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -27,6 +27,7 @@
 
         <activity android:name="com.example.delevryproject.ui.home.event.EventActivity" android:exported="true"/>
         <activity android:name=".ui.home.mylocation.MyLocationActivity" android:screenOrientation="portrait" android:exported="true"/>
+        <activity android:name="com.example.delevryproject.ui.home.restaurant.RestaurantListActivity" android:exported="true"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

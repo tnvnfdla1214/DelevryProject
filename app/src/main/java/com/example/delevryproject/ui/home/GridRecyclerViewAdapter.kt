@@ -2,13 +2,17 @@ package com.example.delevryproject.ui.home
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delevryproject.R
 import com.example.delevryproject.data.local.model.GridItem
+import com.example.delevryproject.ui.home.event.EventActivity
 
 import kotlinx.android.synthetic.main.item_layout_grid.view.*
 import kotlinx.coroutines.CoroutineScope
@@ -16,12 +20,14 @@ import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class GridRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class GridRecyclerViewAdapter(private val interaction: Interaction) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var gridItemList: List<GridItem>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return GridItemViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_layout_grid, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_layout_grid, parent, false),
+            interaction
         )
     }
 
@@ -42,7 +48,7 @@ class GridRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
     }
 
 
-    class GridItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GridItemViewHolder(itemView: View ,private val interaction: Interaction) : RecyclerView.ViewHolder(itemView) {
         fun bind(gridItem: GridItem) {
             itemView.iv_grid_image.setImageResource(gridItem.image)
             itemView.tv_grid_title.text = gridItem.title
@@ -50,6 +56,11 @@ class GridRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             if(gridItem.image == R.drawable.b){
                 animateView(itemView.iv_grid_image)
             }
+            itemView.setOnClickListener {
+                //아이템넘겨주는건 여기 나중에 수정
+                interaction.onGridItemClicked(itemView)
+            }
+
         }
 
         // 애니메이션 함수

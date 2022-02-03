@@ -6,7 +6,7 @@ import androidx.annotation.StringRes
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class DefaultResourcesProvider (
+class ResourcesProviderImpl (
     private val context: Context
 ) : ResourcesProvider {
 

@@ -5,6 +5,7 @@ import androidx.room.RoomDatabase
 import com.example.delevryproject.data.entitiy.locaion.LocationLatLngEntity
 import com.example.delevryproject.data.entitiy.restaurant.RestaurantEntity
 import com.example.delevryproject.data.entitiy.restaurant.RestaurantFoodEntity
+import com.example.delevryproject.data.local.db.dao.FoodMenuBasketDao
 import com.example.delevryproject.data.local.db.dao.LocationDao
 import com.example.delevryproject.data.local.db.dao.RestaurantDao
 
@@ -25,7 +26,7 @@ abstract class ApplicationDatabase: RoomDatabase() {
 
     abstract fun LocationDao(): LocationDao
 
-    //abstract fun FoodMenuBasketDao(): FoodMenuBasketDao
+    abstract fun FoodMenuBasketDao(): FoodMenuBasketDao
 
     abstract fun RestaurantDao(): RestaurantDao
 

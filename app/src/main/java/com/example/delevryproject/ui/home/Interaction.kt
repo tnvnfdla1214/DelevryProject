@@ -6,4 +6,5 @@ import com.example.delevryproject.data.local.model.BannerItem
 
 interface Interaction: View.OnClickListener {
     fun onBannerItemClicked(bannerItem: BannerItem)
+    fun onGridItemClicked(itemView: View)
 }

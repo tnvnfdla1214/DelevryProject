@@ -3,6 +3,7 @@ package com.example.delevryproject.ui.home
 /*
 1. 현재위치 불러오기
 2. 해당하는 메뉴에 따른 데이터 액티비티로 넘겨주기
+3. 장바구니 동그란거 추가
  */
 
 import android.Manifest
@@ -14,6 +15,7 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -35,6 +37,7 @@ import com.example.delevryproject.extension.collapse
 import com.example.delevryproject.extension.expand
 import com.example.delevryproject.ui.home.HomeViewModel.Companion.MY_LOCATION_KEY
 import com.example.delevryproject.ui.home.mylocation.MyLocationActivity
+import com.example.delevryproject.ui.home.restaurant.RestaurantListActivity
 
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,7 +56,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(), Interac
     private lateinit var gridRecyclerViewAdapter: GridRecyclerViewAdapter
     private lateinit var viewPagerAdapter: ViewPagerAdapter
 
-    // 이게 꽤 흥미로운데, changeLocationLauncher가 쓰이는 곳에서 intent한 액티비티에서 전달 받은 값을 가지고 loadReverseGeoInformation를 한번 더함
+    // changeLocationLauncher가 쓰이는 곳에서 intent한 액티비티에서 전달 받은 값을 가지고 loadReverseGeoInformation를 한번 더함
     private val changeLocationLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             result.data?.getParcelableExtra<MapSearchInfoEntity>(MY_LOCATION_KEY)?.let { myLocationInfo ->
@@ -113,13 +116,13 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(), Interac
 
     private fun initGridRecyclerView() {
         gridRecyclerView.apply {
-            gridRecyclerViewAdapter = GridRecyclerViewAdapter()
+            gridRecyclerViewAdapter = GridRecyclerViewAdapter(this@HomeFragment)
             layoutManager = GridLayoutManager(this@HomeFragment.context, 4)
             adapter = gridRecyclerViewAdapter
 
         }
     }
-
+    //배너 광고
     private fun initViewPager2() {
         viewPager2.apply {
             viewPagerAdapter = ViewPagerAdapter(this@HomeFragment)
@@ -136,6 +139,19 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(), Interac
 
     override fun onBannerItemClicked(bannerItem: BannerItem) {
         startActivity(Intent(this@HomeFragment.context, EventActivity::class.java))
+    }
+
+    //음식 리스트 보여주는거 -> 나중에 개별 리스트로 넘겨주는걸로 수정
+    //Intent로 mapSearchInfoEntity 넘겨줘야 함
+    //EventActivity -> 레스토랑 액티비티로 변경해야함
+    override fun onGridItemClicked(itemView: View) {
+        var Intent = Intent(this@HomeFragment.context, RestaurantListActivity::class.java)
+        viewModel.getMapSearchInfo()?.let { mapInfo ->
+            Intent = RestaurantListActivity.newIntent(
+                requireContext(), mapInfo
+            )
+            startActivity(Intent)
+        }
     }
 
     override fun onClick(v: View?) {

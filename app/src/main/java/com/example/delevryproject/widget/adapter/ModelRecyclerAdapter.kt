@@ -7,18 +7,17 @@ import com.example.delevryproject.model.CellType
 import com.example.delevryproject.model.Model
 import com.example.delevryproject.ui.base.BaseViewModel
 import com.example.delevryproject.util.mapper.ModelViewHolderMapper
-import com.example.delevryproject.util.provider.DefaultResourcesProvider
+import com.example.delevryproject.util.provider.ResourcesProviderImpl
 import com.example.delevryproject.util.provider.ResourcesProvider
 import com.example.delevryproject.widget.adapter.listener.AdapterListener
 import com.example.delevryproject.widget.adapter.viewholder.ModelViewHolder
-import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 
 class ModelRecyclerAdapter<M : Model, VM: BaseViewModel> @Inject constructor(
     private var modelList: List<Model>,
     private var viewModel: VM,
-    private val resourcesProvider: ResourcesProvider = DefaultResourcesProvider(BaseApplication.appContext!!), //모듈에 넣어줘야 함
+    private val resourcesProvider: ResourcesProvider = ResourcesProviderImpl(BaseApplication.appContext!!), //모듈에 넣어줘야 함
     private val adapterListener: AdapterListener
 ) : ListAdapter<Model, ModelViewHolder<M>>(Model.DIFF_CALLBACK) {
 
