@@ -29,13 +29,13 @@
 #### 메인 화면
 ![움직이는 짤2](https://user-images.githubusercontent.com/48902047/169704816-233e1813-0c83-47b6-bf54-8c15af5a35c8.gif)
 #### 네비게이션 화면
-<img src = "https://user-images.githubusercontent.com/48902047/156923668-6b20d53f-8b14-4b82-9c28-7af08a2b811e.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/156923726-321e570c-1d10-487e-9ad9-f54b9a214602.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/156923751-2106c77e-524d-4e1d-b60d-5fbc21f59393.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/156923754-5eb898d3-c3c1-426d-9023-9e7df9a72663.jpg" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/48902047/156923668-6b20d53f-8b14-4b82-9c28-7af08a2b811e.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/156923726-321e570c-1d10-487e-9ad9-f54b9a214602.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/156923751-2106c77e-524d-4e1d-b60d-5fbc21f59393.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/156923754-5eb898d3-c3c1-426d-9023-9e7df9a72663.jpg" width="20%" height="20%">
 
 #### 내 위치 화면
-<img src = "https://user-images.githubusercontent.com/48902047/169704982-88adce0a-353e-4b0d-a440-759e65ec5624.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/169705011-81318b9f-0736-47d6-9e6d-471758b24cc2.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/169705018-95ab6e13-7bc2-47a0-b2d9-03ba2904dd0e.jpg" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/48902047/169704982-88adce0a-353e-4b0d-a440-759e65ec5624.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/169705011-81318b9f-0736-47d6-9e6d-471758b24cc2.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/169705018-95ab6e13-7bc2-47a0-b2d9-03ba2904dd0e.jpg" width="20%" height="20%">
 
 #### 음식점 화면
-<img src = "https://user-images.githubusercontent.com/48902047/169705050-3491e5ea-ad58-402e-b3d0-b475f31e0c34.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/169705076-204111b0-ed70-4fe1-b3c8-2bf9b7377569.jpg" width="20%" height="20%"><img src = "https://user-images.githubusercontent.com/48902047/169705124-49d657e3-abbc-4efb-ab4c-f36583e89e27.jpg" width="20%" height="20%">
+<img src = "https://user-images.githubusercontent.com/48902047/169705050-3491e5ea-ad58-402e-b3d0-b475f31e0c34.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/169705076-204111b0-ed70-4fe1-b3c8-2bf9b7377569.jpg" width="20%" height="20%">  <img src = "https://user-images.githubusercontent.com/48902047/169705124-49d657e3-abbc-4efb-ab4c-f36583e89e27.jpg" width="20%" height="20%">
 
 ## 기술 Stack
 ### Android Architecture Guide와 MVVM, Jetpack
